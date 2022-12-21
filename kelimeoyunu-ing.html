@@ -1,0 +1,251 @@
+<html>
+    <head>
+        <title>İngilizce Hızlı Yazma</title>
+        <script src="assets/js/words.js" charset="UTF-8"></script>
+        <link rel="stylesheet" type="text/css" href="assets/css/kelimeoyunu-ing.css">
+    </head>  
+    <body>
+        <div class="main-wrapper">
+            <div class="centered">
+                <div class="word-table">
+                        <div>
+                            <span class="word" id="word-1"></span>
+                            <span class="word" id="word-2"></span>
+                            <span class="word" id="word-3"></span>
+                            <span class="word" id="word-4"></span>
+                            <span class="word" id="word-5"></span>
+                            <span class="word" id="word-6"></span>
+                        </div>
+                        <div>
+                            <span class="word" id="word-7"></span>
+                            <span class="word" id="word-8"></span>
+                            <span class="word" id="word-9"></span>
+                            <span class="word" id="word-10"></span>
+                            <span class="word" id="word-11"></span>
+                            <span class="word" id="word-12"></span>
+                        </div>
+                        <div>
+                            <span class="word" id="word-13"></span>
+                            <span class="word" id="word-14"></span>
+                            <span class="word" id="word-15"></span>
+                            <span class="word" id="word-16"></span>
+                            <span class="word" id="word-17"></span>
+                            <span class="word" id="word-18"></span>
+                        </div>
+                </div>
+
+                <input type="text" placeholder="Yazmaya başla" autofocus="autofocus" id="input" spellcheck="false"></input>
+                
+                <div class="textbox">
+                        <div id="countdown">60</div>
+                        <select id="language" onchange="changeLanguage()">
+                            <option value="English">English</option>
+                            <option value="Türkçe">Türkçe</option>
+                            
+                        </select>
+                </div>
+
+                <div id="displayWhenDone">
+                        <div id="feedback"></div>
+                        <button onclick="window.location.reload();">Restart</button>
+                </div>
+            </div>
+        </div>
+        <center><a href="anasayfa.html"  ><button type="button">Ana sayfa dön</button></a></center>
+    </body>
+
+</html>
+
+<script>
+    const outputText = document.getElementById("output");
+    const inputText = document.getElementById("input");
+    const feedback = document.getElementById("feedback");
+    const countdown = document.getElementById("countdown");
+    const languageSelect = document.getElementById("language");
+
+    // generate new array of 18 words
+    newWordArray = (arr) => {
+        let wordsArr = new Array(18);
+        for (let i = 0; i < 18; i++) {
+            // new random word
+            wordsArr[i] = arr[Math.floor(Math.random() * arr.length)];
+        }       
+        return wordsArr; 
+    }
+    
+    seedTableWithWords = (arr) => {
+        for (let i = 0; i < arr.length; i++) {
+            document.getElementById("word-" + (i + 1)).innerText = arr[i];
+        }
+    }
+
+    // generate array of words, and seed the table with them (using method [getWords] from external js-file)
+    let wordlist = wordsEng;
+    let currentWords = newWordArray(wordlist);
+
+    changeLanguage = () => {
+        const selected = languageSelect.value;
+
+        switch(selected) {
+            case "English":
+                wordlist = wordsEng;
+                break;
+                case "Türkçe":
+                wordlist = wordsTr;
+                break;
+            }
+        newWordSet();
+    }
+
+    seedTableWithWords(currentWords);
+
+    // for calculation & statistics
+    let Doğrukelime = 0;
+    let YanlışKelime = 0;
+    let Doğruharf = 0;
+    let YanlışHarf = 0;
+    let Kelimeiçindakika = 0;
+
+    let nthWord = 0;
+
+    const currentWordBackground = "#d5d5d5";
+
+    // first word settings
+    let currentWord = currentWords[nthWord];
+    nthWord++;
+    document.getElementById("word-1").style.background = currentWordBackground;
+
+    // timer
+    let seconds = 60;
+    let timerStarted = false;
+
+    var timerFunction = setTimeout(function(){
+        setInterval(function(){
+            // run timer until timer reaches zero
+            if (timerStarted && seconds > 0) {
+                seconds = seconds - 1;
+                countdown.innerText = seconds;
+                inputText.placeholder = "";
+            }
+
+            // when test is over
+            if (seconds == 0) {
+                clearInterval(timerFunction);
+                countdown.style.display = "none";
+
+                // stop input
+                inputText.readOnly = true;
+                inputText.style.display = "none";
+
+                // show statistics
+                feedback.innerHTML = "Dakika Başına Kelime Sayısı: " + (Doğrukelime+ YanlışKelime)
+                    + "<br>Doğruluk yüzdesi " + accuracy() + "%"
+                    + "<br><br>Doğru yazılan harf sayısı: " + Doğruharf
+                    + "<br>Yanlış yazılan harf sayısı: " + YanlışHarf
+                    + "<br><br>Doğru kelime sayısı: " + Doğrukelime
+                    + "<br>Yanlış kelime sayısı: " + YanlışKelime;
+
+                document.getElementById("displayWhenDone").style.display = "flex";
+            }
+
+        }, 1000);
+    }, 1000);
+
+    // handle key presses
+    inputText.addEventListener('keyup', (e) => {
+
+        // timer starts when typing starts
+        if (inputText.value != "" && seconds == 60) {
+            timerStarted = true;
+            // hide language selection
+            languageSelect.style.display = "none";
+        }
+
+        // when space is pressed, check if typed word is correct
+        if (e.keyCode == 32) {
+            let typedWord = inputText.value;
+            typedWord = typedWord.trim();
+            inputText.value = "";
+
+            if (typedWord === currentWord) { // if word is correct
+                Doğruharf += typedWord.length + 1; // + space press will count as correct char
+                Doğrukelime++;
+                console.log("correct! correct words: " + Doğrukelime + "\tcorrect chars: " + Doğruharf);
+
+                // color word green
+                document.getElementById("word-" + (nthWord)).style.background = "#a0ffa0";
+            } else { // if word is wrong
+                YanlışHarf += typedWord.length + 1 ;
+                YanlışKelime++;
+                console.log("wrong! wrong words: " + YanlışKelime + "\twrong chars: " + YanlışHarf);
+
+                // color word red
+                document.getElementById("word-" + (nthWord)).style.background = "#ffa0a0";
+            }
+
+            newWord();
+
+        } else {
+            // check if substring is correct: if not, color text background to red
+            inputTemp = inputText.value;
+            inputTempSub = inputTemp.substr(0, inputTemp.length - 1);
+            outputSub = currentWord.substr(0, inputTemp.length);
+            inputLastChar = inputTemp[inputTemp.length - 1];
+
+            if (inputTemp == outputSub || (inputLastChar == " " && inputTempSub == outputSub)) {
+                document.getElementById("word-" + (nthWord)).style.background = currentWordBackground;
+            } else {
+                document.getElementById("word-" + (nthWord)).style.background = "#ffa0a0";
+            }
+        }
+
+    });
+
+    // calculate words per minute by international standard
+    countWPM = (chars) => {
+        if (chars == 0) {
+            return 0;
+        }
+        return (chars / 5).toFixed(0);
+    }
+
+    // calculate accuracy stat
+    accuracy = () => {
+        let acc = Doğruharf/(Doğruharf + YanlışHarf);
+        acc *= 100;
+        acc = acc.toFixed(1);
+        // return acc if it is number, else 0
+        return (acc === NaN ? 0 : acc);
+    }
+
+    clearTableStyles = () => {
+        for (let i = 1; i <= currentWords.length; i++) {
+            document.getElementById("word-" + (i)).style.background = "none";
+        }
+        // also highlight first word
+        document.getElementById("word-1").style.background = currentWordBackground;
+    }
+
+    // generate new wordset and display it on page
+    newWordSet = () => {
+        clearTableStyles();  
+
+        currentWords = newWordArray(wordlist);
+        seedTableWithWords(currentWords);
+
+        nthWord = 0;
+        currentWord = currentWords[0];
+        nthWord++;          
+    }
+
+    newWord = () => {
+        if (nthWord < currentWords.length) {
+            currentWord = currentWords[nthWord];
+            nthWord++;
+            document.getElementById("word-" + nthWord).style.background = currentWordBackground;
+        } else {    
+            newWordSet();
+        }
+    }
+
+</script> 

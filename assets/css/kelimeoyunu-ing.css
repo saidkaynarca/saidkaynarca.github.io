@@ -1,0 +1,72 @@
+body {
+        font-family: customFont, monospace, sans-serif;
+        font-size: 1.5rem;
+        background: #d3d3d3;
+        background: url('https://c.pxhere.com/photos/50/17/wood_wood_fibre_boards_brown_texture_pattern_abstract_detail_backgrounds-1272182.jpg!d');
+ 
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .main-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .centered {
+        display: flex;
+        padding: 2rem 4rem 4rem 4rem;
+        margin-top: 10vh;
+        align-items: center;
+        flex-direction: column;
+        background: white;
+        border: solid 2px;
+        border-radius: 8px;
+    }
+
+    .word-table, #feedback {
+        margin-top: 2rem;
+    }
+
+    .word {
+        margin-right: 0.3rem;
+    }
+
+    #language {
+        margin-top: 0.5rem;
+    }
+
+    input[type="text"], select {
+        font-size: 1.5rem;
+        font-family: customFont, monospace, sans-serif;
+        border-color: black;
+        border-width: 1px;
+    }
+
+    .textbox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #input {
+         margin: 2rem 2rem 1rem 2rem;
+        text-align: center;
+        border-color: black;
+        border-width: 1px;
+    }
+
+    #displayWhenDone {
+        display: none;
+        flex-direction: column;
+    }
+
+    button {
+        margin-top: 2rem;
+        font-family: customFont, monospace;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 2rem;
+        background: #fcfcfc;
+        border-radius: 1rem;
+    }

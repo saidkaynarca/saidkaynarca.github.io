@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>
+        Said Kaynarca GitHub Navbar
+    </title>
+	
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <link href="arkaplan-düzenleme.css" rel="stylesheet"/>
+</head>
+  
+<body>
+	<div class="container mt-5">
+	    <div class="myrow">
+		<center><h1>BİLGİLENDİRME</h1></center>
+	    </div>
+	    <div class="myrow">
+			Merhaba ben Said Kaynarca Mersin Üniversitesinde Bilişim Sistemleri ve Teknolojileri bölümü 21430070044 numaralı 2.sınıf öğrencisiyim.
+		    Bu sitemizde sizlere Vue3.js kurulumu ve vue3 ile nasıl fast typing uygulaması yapılır onu anlatacağım.
+	    </div>
+		<div class="myrow">
+			Yaptığım sitenin çalışan haline buradan ulaşabilirsiniz.
+			<a href="anasayfa.html">Hız testi için siteye aktarma linki</a>
+	    </div>
+		    <div class="myrow">
+			Bu github sayfasında kullandığım kod dizini resimler ve her şey için bakacağınız github repository için buraya tıklamanız yeterli.
+			<a href="#">Github REPOSİTORY için bana tıkla</a>
+	    </div>
+		<div class="myrow">1
+			Kişisel github profilime bakmak isterseniz buraya tıklayın
+			<a href="https://github.com/saidkaynarca">GitHub profilim</a>
+	    </div>		
+	</div>
+	<div class="container border border-primary rounded mt-2">
+		<h1>Vue.js BİLGİLENDİRME</h1>
+			<p>Vue.js, kullanıcı arayüzleri oluşturmak için dinamik bir JavaScript çerçevesidir .
+				 Bu sistem, dik öğrenme eğrisi ile ünlüdür.  
+				 Ancak, o kadar erişilebilir ve basit bir çerçeve ki, Vue.js'de web uygulamaları oluşturmaya yalnızca HTML, CSS ve JavaScript'i temel alarak başlayabiliriz.
+			     Kısa öğrenme eğrisi, bu ilerici çerçevenin bir özelliğidir.
+			     Esnektir ve web geliştirmede bir yardımcı program veya kapsamlı çerçeve olarak kullanılabilir.<br>
+			 <kbd>Arka plan rengi kahverengi olan kısımlar kurulum için</kbd><br>
+			 <kbd>Arka plan rengi mor olan kısımlar örnek ve gösterim için</kbd><br>
+			 <kbd>Arka plan rengi sarı olan kısımlar kodları daha rahat incelemeniz için</kbd>
+			</p>
+	</div>
+	
+	<div class="container border border-primary rounded mt-2">
+		<h2>Vue.js Kurulumu</h2>
+		<p>Vue.Js kurulumu öncesinde bilgisayarınıza Node.js kurmanız gerekiyor. Daha sonradan sıkça karşılacağınız npm ifadesi de Node.js’ten geliyor olacak.</p>
+		 <h3>Node.js Kurulumu</h3>
+		<center><img src="Screenshot_1.png" class="img-fluid" alt="download adımları" width="700" height="400" ></center> 
+		
+		<ul class="renklendirme">
+			<li class="kurulum-renk">Node.js’in son stabil sürümünü
+			 <a href="https://nodejs.org/"> https://nodejs.org/</a>adresinden indirebilirsiniz.
+			 <br>Solda yer alan LTS versiyonunu indirmeniz tavsiye edilmektedir çünkü Current (current / şu anki stabil değildir ve geliştirmelere devam edilmektedir.)<br>
+				<br />
+				<ul class="list-group">
+					<li class="kurulum-renk m-1">
+						Kurulumun başarıyla tamamlandığından emin olmak isterseniz, command line’ı açarak (Başlat > Çalıştır > cmd)      <br>  <br>                    
+				<center><img src="Screenshot_2.png" class="img-fluid" alt="download adımları" width="700" height="400" ></center>
+				<br>npm -v 
+				<br>node -v
+				<br>kodlarını yazabilirsiniz.
+					</li>
+				</ul>      
+			</li>
+		</ul>
+	</div>
+	
+	<div class="container border border-primary rounded mt-2">
+		<h2>Vue.JS Nasıl Kurulur?</h2>
+		<p>Sıra geldi Vue.JS kurulumuna. Alt kısımdaki kodu yazarak kuruluma başlayabilirsiniz.</p>
+		 <h5>npm install -g @vue/cli</h5>
+		<center><img src="Screenshot_3.png" class="img-fluid" alt="download adımları" width="700" height="400" ></center> 
+		
+		<ul class="renklendirme">
+			<li class="kurulum-renk"> Ardından alt kısımdaki kodu yazarak kurulumun yapıldığından emin olabilirsiniz.<br>
+				<br />
+				<ul class="list-group">
+					<li class="kurulum-renk m-1">               
+				<center><img src="Screenshot_4.png" class="img-fluid" alt="download adımları" width="700" height="400" ></center>
+				 <br>Görüldüğü üzere benim bilgisayarımda şu anda Vue/Cli 4.5.6 sürümü kuruluymuş. Kodu çalıştırdıktan sonra Vue.Js’i update etmiş oldum ve sürümüm 4.5.7 oldu.
+					</li>
+				</ul>      
+			</li>
+			<li class="kurulum-renk">
+				<center><img src="Screenshot_5.png" class="img-fluid" alt="download adımları" width="700" height="400" ></center>
+			</li>
+		</ul>
+	</div>
+	
+	<div class="container border border-primary rounded mt-2">
+		<h2>Vue.Js Proje Oluşturmak</h2>
+		<h6>Vue.js’te proje oluşturmak için 2 farklı alternetifi kullanabilirsiniz. Ben neredeyse her zaman ilk alternatifi kullanıyorum.<h6>
+		 
+		<center><img src="Screenshot_8.png" class="img-fluid" alt="download adımları" width="700" height="400" ></center> 
+		
+		
+		<ul class="renklendirme">
+			<li class="kurulum-renk"> <h6>1-) Projenizi oluşturmak istediğiniz klasöre giderek adres satırına cmd yazıp entera basabilirsiniz.</h6>  
+				<br /><center><img src="Screenshot_9.png" class="img-fluid" alt="download adımları" width="700" height="400" ></center>
+				<ul class="list-group">
+					<li class="kurulum-renk m-1">          
+						
+				 <h6>2-) Direkt cmd ya da Terminal İle Vue.Js Proje Oluşturmak</h6>
+				 Bilgisayarınızdan Başlat > Çalıştır > cmd yazıp komut satırını başlatabilirsiniz. 
+				<p> Ayrıca, Visual Studio Code veya benzeri bir Text Editor kullanıyorsanız da Terminal kısmından da komut ekranını açabilirsiniz. 
+				 Bundan sonrası iki alternatif için de aynı olarak devam edecek. 
+				 Sadece 2. alternatifi kullanıyorsanız, cd klasör veya cd.. ile hareket ederek projeyi oluşturmak istediğiniz klasöre ulaşıp projenizi oluşturmaya başlayabilirsiniz. 
+				 Bu ekrandaki komutları kullanmayı bilmiyorsanız, ilk alternatif sizin için daha kolay olacaktır.</p>
+				 <h6>Gelen ekranda;</h6>
+				 <center><img src="Screenshot_10.png" class="img-fluid" alt="download adımları" width="700" height="400" ></center>
+				 <h5>vue create projeadi</h5>
+				 <p>yazdığınızda karşınıza şöyle bir ekran gelecek. (Proje adınızda büyük harf kullanırsanız uyarı alırsınız.
+					 Projenin tüm harfleri küçük olmalıdır.)</p>
+					 <center><img src="Screenshot_11.png" class="img-fluid" alt="download adımları" width="700" height="400" ></center>
+					 <h5>Görüldüğü üzere 3 farklı seçenek var, gelin bunlar nelermiş görelim.</h5>
+					 <p>Default (Vue2, babel, eslint): Anlaşılacağı üzere varsayılan proje şablonudur.
+						 Enter’a basarak detaylı ayar yapmaya gerek kalmadan projenizi oluşturabilirsiniz.</p>
+						 <p>Default (Vue3, babel, eslint): Bir üstteki ile aynı olmakla birlikte, şu anda Vue3 stabil sürüm olmadığı için tavsiye etmiyorum.
+						 Öyle ki birçok Vue.js pluginine bu sürümde ulaşamayabilirsiniz ya da sorunlar yaşayabilirsiniz.</p>
+						 <p>Manually select feautures: Burada tüm seçimleri biz yapıyoruz. 
+						Projenize göre seçimlerinizi yapabilirsiniz.</p>
+						<p>Böylece vue.js kurulumu ve neasıl proje oluşturulacağını öğrenmiş olduk.</p>
+
+					</li>
+				</ul>      
+			</li>
+			
+		</ul>
+	</div>
+	
+	
+
+	<div class="container border border-primary rounded mt-2">
+		<h2>Sitenin amacı</h2>
+		 <p>
+		 Bu sitemizde size Vue.js kütüphanesi kullanarak fast typing yapımını anlatacağım.
+		 Bununla beraber fast typing örnekler göstererek anlatacağım. Bu sitenin
+		  sonuna geldiğinizde kendiniz fast typing yapacak duruma geleceksiniz.
+		  Bir dakika süreniz var ekrenda yazan kelimeleri yazmaya çalışıyorsunuz. 60 saniyenin sonunda kaç kelime yazdığınız ne kadarı doğru ne kadarı yanlış yüzdesi görünecek.
+		  Kaç doğru kelime yazdınız , kaç yanlış kelime yazdınız hepsi görünecek.
+
+		 </p>
+		<div class="row border border-secondary rounded m-1">
+			<div class="col-lg-8">
+				<img src="Screenshot_6.png" alt="fast typing görünüm örnekleri" class="img-fluid" width="800" height="400" >
+				<img src="Screenshot_7.png" alt="fast typing görünüm örnekleri" class="img-fluid" width="800" height="400" >
+			</div>
+			<div class="col-lg-4">
+				Ben burada iki çeşit fast typing yaptım.<br>Birisi türkçe birisi de ingilizce olacak şekilde.<br><br><br>
+				<br> Üstte gördüğünüz türkçe olan tamamen vue.js ile yapıldı
+				<br><br><br><br><br><br><br><br><br><br><br>Bu gördüğünüz ingilizce olan ise  javascript ile yapıldı.
+			</div>
+		</div>
+	</div>
+	<div class="container border border-primary rounded mt-2">
+		<h2>Kod içeriği</h2>
+		 <p>
+		 Kod satırları yeri geliyor onbinleri geçiyor tek tek açıklamam ve sizlerin bunu kontrolu günlerimizi alır. O yüzden yüzeysel bi şekilde göstereceğim.
+		 </p>
+		<div class="row border border-secondary rounded m-1">
+			<div class="col-lg-8">
+				<img src="assets-1.gif" alt="fast typing görünüm örnekleri" class="img-fluid" width="800" height="400" >
+				<img src="assets-2.gif" alt="fast typing görünüm örnekleri" class="img-fluid" width="800" height="400" >
+			</div>
+			<div class="col-lg-4">
+				Ben burada iki farklı video çektim;
+				<br>Birisi assets dosylarının içeriklerini gösterecek.
+				<br>Birisi ise assets dosyasının geri kalanında ki içierikleri gösterecek.
+				<br> Asset klasörünün içindekiler;
+				<br><br><-- "Css" klasörü içinde tüm sayfaların css komutlarını barındırıyor.
+				<br><-- "İmg" klasörü içinde sitemizde kullanılan fotoğrafları barındırıyor.
+				<br><-- "js" içinde vue.js'ye ait kod satırlarını barındırıyor.<br><br><br><br><br><br><br><br><br><br><br>
+				Burada assets dosyasından geriye kalanlar var.
+				<br><br><-- "anasayfa.html" Sitemin anasayfasının kodları ve "anasayfa.css" ise düzenleyicilerden oluşuyor.
+				<br><-- "index.html" ise Github üzerinde sayfayı anlattığım link.
+				<br><-- "kelimeoyunu-ing.html" sadece javascript ile yaptığım fast typing uygulamasının linki.
+				<br><-- "kelimeoyunu-tr.html" ise vue.js ile yaptığım fast typing uygulamasının linki.
+			</div>
+		</div>
+	</div>
+	
+	<div class="container border border-primary rounded mt-2">
+		<h1>SİTENİN VİDEOSU</h1>
+			<p>Sitenin baştan sona nasıl göründüğüne dair çıkarım yapacağınız aynı zamanda sitenin çalıştığını görebileceğiniz bir video yükledim.<br></p>
+			<iframe src="sitenin-videosu.mp4" frameborder="0"></iframe>
+			    <br>Burada sitemizin nasıl çalıştığını ve içeriğini gösterdim.
+				<br> iki farklı hızlı yazma uygulması yaptım ikisini de aynı açtım ve çalıştırdım.			
+				<br>	60 saniyelik kısım dolarken siteyi gezmiş olduk.
+				
+			</div>
+	</div>
+	
+	  <div class="container border border-primary rounded mt-2">
+			<div class="col-lg-12">
+				<h4>Son açıklama</h4>
+				<code class="fw-bold">
+				Böylece vue.js ile fasttyping yapımını adımlarıyla ve çeşitleriyle anlatmış üstüne de nasıl göründüklerini sizlere göstermiş olduk. Umarım anlattıklarımız sizler için faydalı olur. Kodların tamamına ulaşmak isterseniz sizler için tekrar github profilimi
+				link olarak bırakacağım oradan bakmanız yeterli.
+				İlgilendiğiniz için teşekkür ederim. 
+				<a href="https://github.com/saidkaynarca">GitHub profilim</a></code>
+			</div>
+		</div>    
+<br>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+ integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

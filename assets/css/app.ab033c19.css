@@ -1,0 +1,13 @@
+.words{
+    font-size:25px;font-weight:400
+}
+
+.writing-word{
+    background-color:#708090;
+    color:#fff;
+    padding:5px;
+    border-radius:5px;
+}
+a{
+    text-decoration:none
+}

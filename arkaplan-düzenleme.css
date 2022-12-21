@@ -1,0 +1,31 @@
+﻿body {
+    background-image: url("arkaplan-foto.jpg");
+    background-repeat: repeat;
+    
+    
+}
+
+.kurulum-renk {
+    background-color: rgba(128, 81, 0, 0.333);
+    backdrop-filter: blur(25px);
+}
+
+pre {
+    background-color: yellow;
+    backdrop-filter: blur(25px);
+}
+
+.container {
+    border-radius: .35rem;
+    background-color: rgba(241, 255, 192, 0.374);
+    backdrop-filter: blur(25px);
+}
+
+.row {
+    background-color: rgba(154, 113, 219, 0.69);
+}
+
+.row p {
+    background-color: red;
+    padding: 0.25rem;
+}
