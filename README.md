@@ -29,3 +29,4 @@
 		<p>Sıra geldi Vue.JS kurulumuna. Alt kısımdaki kodu yazarak kuruluma başlayabilirsiniz.</p>
     <h2>Vue.Js Proje Oluşturmak</h2>
 		<h6>Vue.js’te proje oluşturmak için 2 farklı alternetifi kullanabilirsiniz. Ben neredeyse her zaman ilk alternatifi kullanıyorum.<h6>
+			</body>
