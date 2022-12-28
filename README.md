@@ -13,8 +13,14 @@
 			Merhaba ben Said Kaynarca Mersin Üniversitesinde Bilişim Sistemleri ve Teknolojileri bölümü 21430070044 numaralı 2.sınıf öğrencisiyim.
 		    Bu sitemizde sizlere Vue3.js kurulumu ve vue3 ile nasıl fast typing uygulaması yapılır onu anlatacağım.
 	    </div>
-      
-   
+      <h1> Kodların Yeri<h1>
+<p> Assets klasörünün içinde bulunan; <br>
+	• css dosyasında siteye ait css kodları bulunuyor. <br>
+ • img dosyasında sitede kullanılan fotoğraflar bulunuyor. <br>
+	• js dosyasında vue.js ile yaptığım uygulamanın kodları ve uygulamada kullandığım sözcüklerin kodları bulunuyor.
+	• vendor dosyasında bootstrapi aktif etmek için gereken kodlar bulunuyor (projemle alakası yok).
+	
+<h1> Anlatım Sayfasında ki Bazı Başlıklar <h1> 
    <div class="container border border-primary rounded mt-2">
 		<h1>Vue.js BİLGİLENDİRME</h1>
 			<p>Vue.js, kullanıcı arayüzleri oluşturmak için dinamik bir JavaScript çerçevesidir .
