@@ -17,7 +17,7 @@
 <p> Assets klasörünün içinde bulunan; <br>
 	• css dosyasında siteye ait css kodları bulunuyor. <br>
  • img dosyasında sitede kullanılan fotoğraflar bulunuyor. <br>
-	• js dosyasında vue.js ile yaptığım uygulamanın kodları ve uygulamada kullandığım sözcüklerin kodları bulunuyor.
+	• js dosyasında vue.js ile yaptığım uygulamanın kodları ve uygulamada kullandığım sözcüklerin kodları bulunuyor.<br>
 	• vendor dosyasında bootstrapi aktif etmek için gereken kodlar bulunuyor (projemle alakası yok).<p>
 	</div>
  
