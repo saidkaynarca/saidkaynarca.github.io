@@ -18,11 +18,11 @@
 	• css dosyasında siteye ait css kodları bulunuyor. <br>
  • img dosyasında sitede kullanılan fotoğraflar bulunuyor. <br>
 	• js dosyasında vue.js ile yaptığım uygulamanın kodları ve uygulamada kullandığım sözcüklerin kodları bulunuyor.
-	• vendor dosyasında bootstrapi aktif etmek için gereken kodlar bulunuyor (projemle alakası yok).
+	• vendor dosyasında bootstrapi aktif etmek için gereken kodlar bulunuyor (projemle alakası yok).<p>
 	
-<h1> Anlatım Sayfasında ki Bazı Başlıklar <h1> 
-   <div class="container border border-primary rounded mt-2">
-		<h1>Vue.js BİLGİLENDİRME</h1>
+
+   <div class="container border border-primary rounded mt-2"> <h1> Anlatım Sayfasında ki Bazı Başlıklar <h1> <br>
+				<h1>Vue.js BİLGİLENDİRME</h1>
 			<p>Vue.js, kullanıcı arayüzleri oluşturmak için dinamik bir JavaScript çerçevesidir .
 				 Bu sistem, dik öğrenme eğrisi ile ünlüdür.  
 				 Ancak, o kadar erişilebilir ve basit bir çerçeve ki, Vue.js'de web uygulamaları oluşturmaya yalnızca HTML, CSS ve JavaScript'i temel alarak başlayabiliriz.
