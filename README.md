@@ -13,7 +13,7 @@
 			Merhaba ben Said Kaynarca Mersin Üniversitesinde Bilişim Sistemleri ve Teknolojileri bölümü 21430070044 numaralı 2.sınıf öğrencisiyim.
 		    Bu sitemizde sizlere Vue3.js kurulumu ve vue3 ile nasıl fast typing uygulaması yapılır onu anlatacağım.
 	    
-      <h1> Kodların Yeri<h1>
+       Kodların Yeri 
 <p> Assets klasörünün içinde bulunan; <br>
 	• css dosyasında siteye ait css kodları bulunuyor. <br>
  • img dosyasında sitede kullanılan fotoğraflar bulunuyor. <br>
